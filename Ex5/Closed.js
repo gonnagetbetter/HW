@@ -1,19 +1,6 @@
 'use strict';
 
-let array = [];    
-
-const seq = (current) => {
-    if (typeof current === 'number') {
-        for ( let fn of array){
-            current = fn(current);
-        }
-        array.length = 0;
-        return current;
-    } else {
-        array.unshift(current);
-        return seq;
-    }
-}
+const seq = (f) => (g) => (typeof g === 'number' ? f(g) : seq((x) => f(g(x))));
 
 let a = seq(x => x + 7)(x => x * 2)(5);
 console.log(a);
