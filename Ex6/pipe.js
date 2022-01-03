@@ -1,4 +1,4 @@
-const pipe = (...fns) => {
+const compose = (...fns) => {
     for(const func of fns){
         if(typeof func !== 'function'){
             throw new Error('Not function');
@@ -13,21 +13,21 @@ const cube = x => x ** 3;
 
 {
 
-const f = pipe(inc, twice, cube);
+const f = compose(inc, twice, cube);
 console.log(f(5));
 
 }
 
 {
 
-const f = pipe(inc, inc);
+const f = compose(inc, inc);
 console.log(f(7));
 
 }
 
 {
 
-const f = pipe(inc, 7, cube);
+const f = compose(inc, 7, cube);
 console.log(f);
 
 }
