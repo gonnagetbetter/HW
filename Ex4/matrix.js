@@ -4,7 +4,7 @@ const max = (Array) => {
   let maxV = Array[0][0];
   for (let i = 0; i < Array.length; i++) {
     for (let j = 0; j < Array[i].length; j++) {
-      let value = Array[i][j];
+      const value = Array[i][j];
       if (maxV < value) maxV = value;
     };
   };
