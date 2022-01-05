@@ -3,12 +3,12 @@
 const person1 = {};
 let person2 = {};
 
-person1.name = 'Jeremy'; 
+person1.name = 'Jeremy';
 person2.name = 'Marcus';
 
 console.dir({person1, person2});
 
-person1.name = 'Brut'; 
+person1.name = 'Brut';
 person2.name = 'Mao';
 
 console.dir({person1, person2});
