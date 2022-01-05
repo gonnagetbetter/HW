@@ -11,7 +11,7 @@ const strToArr = (str) => {
 const shift = (Arr) =>{
   const lenth = Arr.length - 1;
   for (let i = 0; i < lenth; i++) {
-    for (let n = lenth - 1;  n >= 0; n--) {
+    for (let n = lenth - 1; n >= 0; n--) {
       Arr[n] = Arr[n] << 8;
     }
   }
