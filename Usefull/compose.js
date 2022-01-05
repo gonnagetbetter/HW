@@ -1,4 +1,4 @@
-use strict';
+'use strict';
 
 const compose = (f, g) => x => f(g(x));
 
