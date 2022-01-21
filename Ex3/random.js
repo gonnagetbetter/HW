@@ -17,7 +17,7 @@ console.log('Random number 0 to 25: ' + random(25));
 
 const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
-const generateKey = ( length, characters) => {
+const generateKey = (length, characters) => {
   const res = [];
   for (let i = 0; i < length; i++) {
     const num = random(characters.length);
